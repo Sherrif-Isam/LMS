@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,7 @@
   
     <title>BookNest</title>
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="plugins/jquery_datepacker/jquery_ui.css">
     <!-- IonIcons -->
@@ -15,16 +16,1012 @@
     <link rel="stylesheet" href="dist/css/adminlte_ar.min.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
+  </head>
+  <body dir="rtl" class="hold-transition sidebar-mini">
 
-<body dir="rtl" class="hold-transition sidebar-mini">
-    <!-- Place the nav bar here-->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-        </ul>
-    </nav>
     
+  <!-- Put the Nav bar in this place-->
+
+  <!-- Navbar -->
+  <nav  class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Home</a>
+      </li>
+
+    </ul>
+
+    <!-- search form -->
+    <form method="GET" class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" name="search_name" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </nav>
+  <!-- /.navbar -->
+  <!-- Put the slide bar in this place-->
+
+  <!-- Main Sidebar Container -->
+  <aside style="position: fixed;" class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <span class="brand-text font-weight-light">BookNest</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Sherrif Isam</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                New Books
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Category
+                <i class="fas fa-angle-left right"></i>
+                
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+                  <li class="nav-item">
+                    <a id="addcat" href="#" class="nav-link">
+                        <i class="fa fa-plus "></i>
+                        <p  class="text-light"> Add New </p>
+                    </a>
+                  </li> 
+              <form id="cat" method="POST">
+             
+                  <input type="text" class="form-control">
+
+                  <button type="submit" class="btn btn-success">save</button>
+                  <button id="backcat" class="btn btn-primary ">back</button>
+              </form>  
+             
+                  <li style="cursor: pointer;" class="nav-item">
+                    <a id="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>test 1</p>
+                    </a>
+                  </li>
+ 
+                  <li style="cursor: pointer;" class="nav-item">
+                    <a id="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>test 2</p>
+                    </a>
+                  </li>
+
+                  <li style="cursor: pointer;" class="nav-item">
+                    <a id="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>test 3</p>
+                    </a>
+                  </li>
+
+                  <li style="cursor: pointer;" class="nav-item">
+                    <a id="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>test 4</p>
+                    </a>
+                  </li>
+
+                  <li style="cursor: pointer;" class="nav-item">
+                    <a id="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>test 5</p>
+                    </a>
+                  </li>
+
+                  <li style="cursor: pointer;" class="nav-item">
+                    <a id="" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>test 6</p>
+                    </a>
+                  </li>
+        
+
+            </ul>
+          </li>
+
+          <li class="nav-header">Rented Books</li>
+          
+          <li style="cursor: pointer;" class="nav-item">
+            <a id="statusSold" class="nav-link">
+              <i class="nav-icon far fa-circle text-danger"></i>
+              <p class="text">Sold</p>
+            </a>
+          </li>
+          <li style="cursor: pointer;" class="nav-item">
+            <a id="" class="nav-link">
+              <i class="nav-icon far fa-circle text-warning"></i>
+              <p>Rented</p>
+            </a>
+          </li>
+          <li style="cursor: pointer;" class="nav-item">
+            <a id="" class="nav-link">
+              <i class="nav-icon far fa-circle text-info"></i>
+              <p>Available</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Put the content in this place-->
+
+
+  <div style="direction: rtl;" class="wrapper">
+
+
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div   class="content-wrapper">
+      <!-- Content Header (Page header) -->
+  
+  
+      <!--Statistics -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title">Cumlative Book Number</h3>                    
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">500</span>
+                      <span>Cumlative Book Number</span>
+                    </p>  
+                  </div>
+                  <!-- /.d-flex -->
+
+                  <div class="position-relative mb-4">
+                    <canvas id="visitors-chart" height="200"></canvas>
+                  </div>  
+                </div>
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col-md-6 -->
+            
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header border-0">
+                  <div class="d-flex justify-content-between">
+                    <h3 class="card-title"> Profit</h3>   
+                  </div>
+                </div>    
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="d-flex flex-column">
+                      <span id="totalsalarys" class="text-bold text-lg">£240</span><br></p>
+                  </div>
+                  <!-- /.d-flex -->
+  
+                  <div class="position-relative mb-4">
+                    <canvas id="sales-chart" height="160"></canvas>
+                  </div>
+  
+                  <div class="d-flex flex-row justify-content-end">
+                    <span class="mr-2">
+                      <i class="fas fa-square text-primary">Profit from books sold</i> 
+                      <p id="soldtotals"></p>     
+                    </span>
+                    <span>
+                      <i class="fas fa-square text-gray"> Profit from books rented</i> 
+                      <p id="rentedtotals"></p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- /.col-md-6 -->
+          </div>
+          <!-- /.row -->
+  
+          <!-- form add books -->
+          <div class="row m-1 mb-3">   
+            <a href="#bookform" class="btn btn-primary" data-toggle="collapse">+ Add a Book</a>
+          </div>
+          
+          <div id="bookform" class="card card-primary collapse">
+            <div class="card-header">
+              <h3 class="card-title">Add a Book</h3> 
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form method="POST" enctype="multipart/form-data"  > 
+              <div class="card-body"> 
+                <input type="text" class="form-control">
+                <input type="text" class="form-control">
+                <input type="text" class="form-control">
+                <input type="text" class="form-control">
+                <input type="text" class="form-control">
+                <small id='totalrente' class="form-text text-muted"></small>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Addition</button>
+              </div>
+            </form>
+          </div>
+  
+                <!-- /.card -->
+          </div>
+          <!-- end form add books -->
+  
+  
+          <!-- Categories-->
+  
+          <div class="row justify-content-center mb-3">
+            <div class="col-4 ">
+              <ul class="nav">
+            
+                <li class="nav-item ">
+                  <a id="" class="nav-link bg-primary" href="#">History</a>
+                </li>
+                <li class="nav-item ">
+                  <a id="" class="nav-link bg-primary" href="#">Art</a>
+                </li>
+                <li class="nav-item ">
+                  <a id="" class="nav-link bg-primary" href="#">Culture</a>
+                </li>
+                <li class="nav-item ">
+                  <a id="" class="nav-link bg-primary" href="#">Romance</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- books -->
+
+          <div class="row">
+
+          <!-- The books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!-- Drop Down List -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author </h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">600</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£ 24</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Staus</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!-- Book End-->
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!--  Drop Down List  -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username">Book Title </h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">480</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£30</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!--  Book End -->
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!--  Drop Down List -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">700</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">300</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!-- Book End  -->
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!-- Drop Down List  -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">600</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£12</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!-- Book End  -->                
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!--  Drop Down List -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author </h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">700</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£22</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Availabel</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!--  Book End -->
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!-- Drop Down List  -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">600</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£18</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!--  Book End -->
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!--  Drop Down List -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Status</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">900</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£30</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!-- Book End  -->
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!--  Drop Down List -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">200</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£15</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!--  Book End  -->                
+          <!-- Books -->
+              <div id="" class="col-md-4">
+                  <!-- Widget: user widget style 1 -->
+                <div id="" class="card card-widget widget-user ">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                <!-- Drop  Down List  -->
+                <div style="position: absolute;" class="btn-group">   
+                  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Amend</a>
+                    <a class="dropdown-item" href="#">Delete</a>
+                <!-- Button trigger modal -->
+                  </div>
+                </div>
+
+                <div class="widget-user-header bg-info">
+                  <h3 class="widget-user-username"> Book Title</h3>
+                  <h5 class="widget-user-desc"> Book Author</h5>
+                </div>
+                <div class="widget-user-image">
+                  <img style="width:100px; height: 100px;" class="img-circle elevation-2" src="dist/img/user2-160x160.jpg" alt="User Avatar">
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">900</h5>
+                        <span class="description-text">Page</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4 border-right">
+                      <div class="description-block">
+                        <h5 class="description-header">£35</h5>
+                        <span class="description-text">Price</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                    <div class="col-sm-4">
+                      <div class="description-block">
+                        <h5 class="description-header text-dark">Available</h5>
+                        <span class="description-text">Status</span>
+                      </div>
+                      <!-- /.description-block -->
+                    </div>
+                        <!-- /.col -->
+                  </div>
+                      <!-- /.row -->
+                </div>
+                </div>
+                  <!-- /.widget-user -->
+              </div>
+          <!--  Book End --> 
+
+              <div class="row">
+                <div class="col text-center">
+                  <!-- Add a picture here when there is no books -->   
+                </div>
+              </div>
+          </div>    
+      </div>
+    </div>
+        <!-- /.container-fluid -->
+  </div>
+      <!-- /.content -->
+</div>
+    <!-- /.content-wrapper -->
+  
+
+
+  <!-- Put footer here -->
+      <!-- Main Footer -->
+  <footer class="main-footer">
+        <strong>Copyright &copy; 2024 <a href="https://www.linkedin.com/in/sherrifisam">Sherrif Isam</a> for Code Institute.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+            <a target="_blank" class="text-danger" href="https://www.youtube.com/yourchannel"><i class="fab fa-lg fa-youtube"></i></a>
+            <a target="_blank" href="https://www.facebook.com/sherrifisam"><i class="fab fa-lg ml-1 fa-facebook"></i></a>
+            <a target="_blank" class="text-warning" href="https://www.instagram.com/sherrifisam/"><i class="fab fa-lg ml-1 fa-instagram"></i></a>
+        </div>
+  </footer>
+  </div>
+  <!-- ./wrapper -->
+  
+ 
+<!-- REQUIRED SCRIPTS -->
+<script src="plugins/jquery_datepacker/jquery_ui.js"></script>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE -->
+<script src="dist/js/adminlte.js"></script>
+<!-- OPTIONAL SCRIPTS -->
+
+<script src="plugins/chart.js/Chart.min.js"></script>
+
+<script src="dist/js/demo.js"></script>
+<!--<script src="dist/js/pages/dashboard3.js'"></script>
+-->
+<script>
+  $(document).ready(function(){
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    });
+/*Put loop to get id category and status for contact with books */
+/* Cumalative pofit = Profit from Sales + Profit from Rent */
+  });
+</script>
+<script>
+ 
+  
+
+
+$(function () {
+  'use strict'
+ 
+  var ticksStyle = {
+    fontColor: '#495057',
+    fontStyle: 'bold'
+  }
+
+  var mode      = 'index'
+  var intersect = true
+
+  var $salesChart = $('#sales-chart')
+
+  var salesChart  = new Chart($salesChart, {
+
+    type   : 'bar',
+    
+    data   : {
+
+      labels  : [
+          
+
+        'Profit Details ',
+
+      ],
+
+
+      datasets: [
+        {
+          backgroundColor: '#007bff',
+          borderColor    : '#007bff',
+          data           : [ 
+               '50',
+          ]
+        },
+        {
+          backgroundColor: '#ced4da',
+          borderColor    : '#ced4da',
+          data           : [ 
+                '30',
+          ]
+        }
+      ]
+    },
+
+   
+   
+   options: {
+      maintainAspectRatio: false,
+      tooltips           : {
+        mode     : mode,
+        intersect: intersect
+      },
+      hover              : {
+        mode     : mode,
+        intersect: intersect
+      },
+      legend             : {
+        display: false
+      },
+      scales             : {
+        yAxes: [{
+          // display: false,
+          gridLines: {
+            display      : true,
+            lineWidth    : '4px',
+            color        : 'rgba(0, 0, 0, .2)',
+            zeroLineColor: 'transparent'
+          },
+          ticks    : $.extend({
+            beginAtZero: true,
+
+            // Include the £ sign in the ticks
+            callback: function (value, index, values) {
+              if (value >= 1000) {
+                value /= 1000
+                value += 'k'
+              }
+              return '£' + value
+            }
+          }, ticksStyle)
+        }],
+        xAxes: [{
+          display  : true,
+          gridLines: {
+            display: false
+          },
+          ticks    : ticksStyle
+        }]
+      }
+    }
+  });
+  
+ var pieChart = document.getElementById('visitors-chart').getContext('2d')
+
+  var myPieChart = new Chart(pieChart, {
+    type: 'pie',
+    data: {
+      datasets: [{
+        data: ['35','25','40'],
+        backgroundColor :["#27c100","#f3545d","#fdaf4b"],
+        borderWidth: 10,
+        
+      }],
+      labels: ['Available', 'Sold', 'Rented'] 
+    },
+    options : {
+      responsive: true, 
+      maintainAspectRatio: false,
+      legend: {
+        position : 'bottom',
+        labels : {
+          fontColor: '#000',
+          fontSize: 15,
+          usePointStyle : true,
+          padding:30
+        }
+      },
+      pieceLabel: {
+        render: 'percentage',
+        fontColor: 'white',
+        fontSize: 14,
+      },
+
+
+    }
+  })
+
+})
+
+
+ 
+</script>
+
+</body>
+</html>
+
