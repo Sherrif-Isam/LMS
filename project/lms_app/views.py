@@ -4,8 +4,8 @@ from .models import *
 
 
 def index(request):
-    contex ={
-        'book': Book.objects.all(),
+    context ={
+        'books': Book.objects.all(),
 
     }
     return render(request,'pages/index.html', context)
