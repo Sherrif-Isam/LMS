@@ -171,13 +171,18 @@
                         <!-- /.col -->
                     <div class="col-sm-4 border-right">
                       <div class="description-block">
+                      {% if book.price %}
                         <h5 class="description-header">£{{book.price}}</h5>
                         <span class="description-text">Price</span>
+                      {% elif book.rental_price_day %}
+                        <h5 class="description-header">£{{book.rental_price_day}}</h5>
+                        <span class="description-text">Per Day</span>
+                      {% endif %}
                       </div>
                       <!-- /.description-block -->
                     </div>
                         <!-- /.col -->
-                    <div class="col-sm-4">
+                   <div class="col-sm-4">
                       <div class="description-block">
                       {% if book.status == 'Available'%}
                         <h5 class="description-header text-success">{{book.status}}</h5>
