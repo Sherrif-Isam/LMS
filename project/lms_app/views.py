@@ -5,6 +5,7 @@ from .models import *
 
 def index(request):
     context ={
+        'category': Category.objects.all(),
         'books': Book.objects.all(),
 
     }
