@@ -14,6 +14,7 @@ def index(request):
 def books(request): 
     context ={
         'category': Category.objects.all(),
+        'books': Book.objects.all(),
         
 
     }
