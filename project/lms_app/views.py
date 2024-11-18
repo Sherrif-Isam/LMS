@@ -5,6 +5,12 @@ from .forms import BookForm
 
 
 def index(request):
+    if request.method == "POST":
+      add_book = BookForm(request.POST, request.FILES)
+      if add_book.is_valid():
+        add_book.save()
+
+    
     context ={
         'category': Category.objects.all(),
         'books': Book.objects.all(),
