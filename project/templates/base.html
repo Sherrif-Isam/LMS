@@ -60,6 +60,19 @@ $("#addcat").click(function(){
 $("#backcat").click(function(){
   $("#catinput").hide()
 });
+
+{% for book in books %}
+    $(".cat{{book.category.id}}").click(function() {
+        $(".bookhide").hide(); // Hide all books
+        $(".book{{book.category.id}}").show(); // Show books of the selected category
+    });
+
+    $(".status{{book.status}}").click(function() {
+        $(".bookhide").hide(); // Hide all books
+        $(".book{{book.status}}").show(); // Show books of the selected status
+    });
+{% endfor %}
+
 </script>
 <script>
   $(document).ready(function(){
