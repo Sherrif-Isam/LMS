@@ -85,11 +85,16 @@ $("#backcat").click(function(){
 /* Cumalative pofit = Profit from Sales + Profit from Rent */
   });
 </script>
+
 <script>
- 
-  
+$("#rentaldays").keyup(function(){
+  $("#totalrental").val($("#rentaldays").val()*$("#rentalprice").val())
+});
 
 
+</script>
+
+<script>
 $(function () {
   'use strict'
  
