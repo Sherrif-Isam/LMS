@@ -90,6 +90,21 @@ $("#backcat").click(function(){
 $("#rentaldays").keyup(function(){
   $("#totalrental").val($("#rentaldays").val()*$("#rentalprice").val())
 });
+</script>
+
+<script>
+
+$(document).ready(function(){
+
+  var total = 0;
+  $('.totalprice').each(function(){
+    $(this).hide()
+    var salary = $(this).text()
+    total += parseInt(salary)
+
+  });
+  $("#totalsalarys").text(total)
+});
 
 
 </script>
