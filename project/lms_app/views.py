@@ -41,6 +41,7 @@ def books(request):
     context ={
         'category': Category.objects.all(),
         'books': search,
+        'formcat': CategoryForm(),
         
 
     }

@@ -51,6 +51,7 @@
     margin-right: -276px;
 }
 
+
 .toggle-nav-sidebar::before {
     content: '\00BB';
 }
